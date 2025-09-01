@@ -12,8 +12,10 @@
 
         <?php require_once(__DIR__ . '/header.php'); ?>
         <h1>Contactez nous</h1>
-        <form action="submit_contact.php" method="POST">
+        <form action="submit_contact.php" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
+                <label for="files" class="files-label">Files</label>
+                <input type="files" class="form-control" id="screenshot" name="screenshot"/>
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="email-help">
                 <div id="email-help" class="form-text">Nous ne revendrons pas votre email.</div>

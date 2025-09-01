@@ -7,6 +7,7 @@
 
 $postData = $_POST;
 
+
 if (
     !isset($postData['email'])
     || !filter_var($postData['email'], FILTER_VALIDATE_EMAIL)
@@ -15,6 +16,27 @@ if (
 ) {
     echo('Il faut un email et un message valides pour soumettre le formulaire.');
     return;
+}
+
+if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] == 0){
+    if ($_FILES['screenshot']['size'] > 1000000){
+        echo "le fichier est trop gros frerot";
+            return;
+    }
+    $fileinfo = pathinfo($_FILES['screenshot']['name']);
+    $extension = $fileinfo['extension'];
+    $allowed = ['jpg', 'gif', 'png', 'jpeg'];
+    if (!in_array($extension, $allowed)){
+        echo "{$extention}: not allowed!";
+        return ;
+    }
+    $path = __DIR__. '/uploads/';
+    if (!is_dir($path)) {
+        echo "mauvais path";
+        return;
+    }
+    move_uploaded_file($FILES['screenshot']['tmp_name'], $path .
+        basename($_FILES["screenshot"]["name"]));
 }
 
 ?>
