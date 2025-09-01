@@ -9,9 +9,15 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	//
+displayAuthor	src/functions.php	/^function displayAuthor(string $authorEmail, array $users): string$/;"	f	typeref:unknown:string
 display_errors	php/php.ini	/^display_errors=1$/;"	k
 display_startup_errors	php/php.ini	/^display_startup_errors=1$/;"	k
 enable	php/php.ini	/^opcache.enable=0$/;"	k
 error_reporting	php/php.ini	/^error_reporting=E_ALL$/;"	k
+getData	src/submit_contact.php	/^$getData = $_GET;$/;"	v
+getRecipes	src/functions.php	/^function getRecipes(array $recipes): array$/;"	f	typeref:unknown:array
+isValidRecipe	src/functions.php	/^function isValidRecipe(array $recipe): bool$/;"	f	typeref:unknown:bool
 log_errors	php/php.ini	/^log_errors=On$/;"	k
+recipes	src/variables.php	/^$recipes = [$/;"	v
 timezone	php/php.ini	/^date.timezone=UTC$/;"	k
+users	src/variables.php	/^$users = [$/;"	v
